@@ -1,0 +1,24 @@
+{
+  "name": "umpack-front",
+  "description": "um integration package  for front end",
+  "main": "umpack-front.js",
+  "authors": [
+    "0xzerocode"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "usermanagement"
+  ],
+  "homepage": "https://github.com/0xZeroCode/umpack-front",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.1.1",
+    "js-cookie": "2.1.3"
+  }
+}

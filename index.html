@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>um front pack test page</title>
+    <link rel="stylesheet" href="dist/css/umpack-style.css" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/umpack-front.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="bower_components/vex/dist/css/vex.css" />
+    <link rel="stylesheet" href="bower_components/vex/dist/css/vex-theme-plain.css" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/js-cookie/src/js.cookie.js"></script>
+    <script src="bower_components/vex/dist/js/vex.combined.min.js"></script>
+    <script src="umpack-front.js"></script> -->
+</head>
+
+<body>
+    <button id="getTestResources">get Res</button>
+    <button id="logout">Logout</button>
+    <button id="signup_button">sign up</button>
+    <script>
+    $(document).ready(function() {
+
+    	$('#logout').click(function(){
+    		umfp.logout();
+    	});
+    	
+        $('#getTestResources').click(function() {
+            $.ajax({
+                type: 'GET',
+                url: '/resources',
+                headers:umfp.getAuthorizationHeader(),
+                
+                success: function(result) {
+                    alert(result.toString());
+                },
+                error: function(err) {
+                	
+                    alert(err.responseText);
+                }
+
+            })
+        });
+
+        $('#signup_button').click(function(){
+        	umfp.showSignUp();
+        });
+
+        umfp.setOptions({
+            loginPopupTitle: 'Enter user name and password',
+            signupPopupTitle:'Please enter your info',
+            loginUrl: '/um/login',
+            signupUrl:'/um/signup',
+            loginSuccessRedirectionUrl: 'http://stackoverflow.com'
+        });
+        umfp.showLogin();
+
+
+    })
+    </script>
+</body>
+
+</html>

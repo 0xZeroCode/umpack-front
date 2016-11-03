@@ -1,0 +1,30 @@
+{
+  "name": "umpack-front",
+  "version": "1.0.0",
+  "description": "um integration package  for front end",
+  "main": "index.js",
+  "scripts": {
+    "start": "node testServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xZeroCode/umpack-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xZeroCode/umpack-front/issues"
+  },
+  "homepage": "https://github.com/0xZeroCode/umpack-front#readme",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "2.0.13",
+    "gulp-concat": "2.6.0",
+    "gulp-uglify": "2.0.0"
+  }
+}
